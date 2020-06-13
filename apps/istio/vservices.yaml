@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: apps-vservice
+spec:
+  hosts:
+  - "app.hotsapp.net"
+  gateways:
+  - apps-gateway
+  http:
+  - match:
+    - uri:
+        #prefix: /nginx
+    rewrite:
+        #uri: /
+    route:
+    - destination:
+        host: appfront
+        port:
+          number: 80

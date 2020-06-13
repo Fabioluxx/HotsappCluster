@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "prod1"
+  cluster:
+    server: "https://rancher.neonsistemas.ml/k8s/clusters/c-7fr6b"
+
+users:
+- name: "prod1"
+  user:
+    token: "kubeconfig-user-dhg5d:kszwmml9x6rwnkms4cngnx6vt7jxvgmgbsvzjg92rjknrm8qq65cgw"
+
+contexts:
+- name: "prod1"
+  context:
+    user: "prod1"
+    cluster: "prod1"
+
+current-context: "prod1"
