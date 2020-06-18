@@ -10,11 +10,62 @@ spec:
   http:
   - match:
     - uri:
-        #prefix: /nginx
-    rewrite:
-        #uri: /
+        prefix: /
     route:
     - destination:
         host: appfront
+        port:
+          number: 80
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: webapi-vservice
+spec:
+  hosts:
+  - "api.hotsapp.net"
+  gateways:
+  - apps-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /webapi/
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: webapi
+        port:
+          number: 80
+  - match:
+    - uri:
+        prefix: /streamer/
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: streamer
+        port:
+          number: 80
+  - match:
+    - uri:
+        prefix: /
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: tornado
+        port:
+          number: 8888
+  - match:
+    - uri:
+        prefix: /phpinfo/
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: phpinfo
         port:
           number: 80

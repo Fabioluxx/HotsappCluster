@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: streamer-dest-rule
+  namespace: default
+spec:
+  host: streamer
+  trafficPolicy:
+    loadBalancer:
+      consistentHash:
+        httpCookie:
+          name: routeKey
+          path: ""
+          ttl: 24h
+        minimumRingSize: 1024

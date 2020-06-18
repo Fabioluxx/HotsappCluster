@@ -1,22 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appfront
+  name: streamer
   labels:
-    app: apprfront
+    app: streamer
+    version: v1
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
-      app: appfront
+      app: streamer
+      version: v1
   template:
     metadata:
       labels:
-        app: appfront
+        app: streamer
+        version: v1
     spec:
       containers:
-      - name: appfront
-        image: hotsapp/appfront
+      - name: streamer
+        image: hotsapp/streamer
         ports:
         - containerPort: 80
 
@@ -25,13 +28,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: appfront
+  name: streamer
   labels:
-    app: appfront
-    service: appfront
+    app: streamer
+    service: streamer
 spec:
   ports:
   - port: 80
     name: http
   selector:
-    app: appfront
+    app: streamer

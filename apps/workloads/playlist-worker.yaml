@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playlist-worker
+  labels:
+    app: playlist-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: playlist-worker
+  template:
+    metadata:
+      labels:
+        app: playlist-worker
+    spec:
+      containers:
+      - name: playlist-worker
+        image: hotsapp/playlist-worker
