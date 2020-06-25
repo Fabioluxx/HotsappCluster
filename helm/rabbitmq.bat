@@ -1,2 +1,2 @@
-helm install -f rabbitmq.yaml rabbitmq bitnami/rabbitmq --namespace infra
+helm install -f rabbitmq.yaml rabbitmq stable/rabbitmq-ha --namespace infra
 PAUSE

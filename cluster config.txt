@@ -1,0 +1,8 @@
+docker run -d --restart=unless-stopped \
+  -p 80:80 -p 443:443 \
+  rancher/rancher:latest \
+  --acme-domain rancher3.hotsapp.net
+
+aws eks --region sa-east-1 update-kubeconfig --name dev9
+
+kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user arn:aws:eks:sa-east-1:733049646441:cluster/dev9

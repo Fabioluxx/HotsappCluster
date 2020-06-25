@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "dev2"
+  cluster:
+    server: "https://rancher.hotsapp.net/k8s/clusters/c-fwr6n"
+
+users:
+- name: "dev2"
+  user:
+    token: "kubeconfig-user-cw8nq:8d4tj4fqh5jvp9cgldqfrt9zllqd7j2n4g899jz25t77k28mc796l2"
+
+contexts:
+- name: "dev2"
+  context:
+    user: "dev2"
+    cluster: "dev2"
+
+current-context: "dev2"
