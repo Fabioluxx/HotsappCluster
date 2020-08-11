@@ -4,7 +4,7 @@ metadata:
   name: apps-vservice
 spec:
   hosts:
-  - "app.hotsapp.net"
+  - "app.plister.net"
   gateways:
   - apps-gateway
   http:
@@ -25,7 +25,7 @@ metadata:
   name: webapi-vservice
 spec:
   hosts:
-  - "api.hotsapp.net"
+  - "api.plister.net"
   gateways:
   - apps-gateway
   http:

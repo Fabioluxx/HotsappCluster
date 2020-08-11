@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Config
 clusters:
-- name: "prod1"
+- name: "dev11"
   cluster:
-    server: "https://rancher.neonsistemas.ml/k8s/clusters/c-7fr6b"
+    server: "https://rancher.plister.net/k8s/clusters/c-5nn44"
 
 users:
-- name: "prod1"
+- name: "dev11"
   user:
-    token: "kubeconfig-user-dhg5d:kszwmml9x6rwnkms4cngnx6vt7jxvgmgbsvzjg92rjknrm8qq65cgw"
+    token: "kubeconfig-user-5mhj6:5pkp4rlc24nshfp4hrcz2m4tgql865qtc8llfx6crsq725nb9bqrf4"
 
 contexts:
-- name: "prod1"
+- name: "dev11"
   context:
-    user: "prod1"
-    cluster: "prod1"
+    user: "dev11"
+    cluster: "dev11"
 
-current-context: "prod1"
+current-context: "dev11"
