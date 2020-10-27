@@ -1,19 +1,32 @@
 apiVersion: v1
-kind: Config
 clusters:
-- name: "dev11"
-  cluster:
-    server: "https://rancher.plister.net/k8s/clusters/c-5nn44"
-
-users:
-- name: "dev11"
-  user:
-    token: "kubeconfig-user-5mhj6:5pkp4rlc24nshfp4hrcz2m4tgql865qtc8llfx6crsq725nb9bqrf4"
-
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURLakNDQWhLZ0F3SUJBZ0lRYTNlN0cxMlZSSldGckdFU2dDWlg0REFOQmdrcWhraUc5dzBCQVFzRkFEQXYKTVMwd0t3WURWUVFERXlSbFlqWXdZemxtT1MxallUWmlMVFJoTUdNdE9XSXhaQzAzWldWbU9UVX
+pNakZrTldZdwpIaGNOTWpBeE1EQTJNVGsxTmpReldoY05NalV4TURBMU1qQTFOalF6V2pBdk1TMHdLd1lEVlFRREV5UmxZall3Cll6bG1PUzFqWVRaaUxUUmhNR010T1dJeFpDMDNaV1ZtT1RVek1qRmtOV1l3Z2dFaU1BMEdDU3FHU0liM0RRRUIKQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUURNdXVJaWt3SVhT
+cUM5RWFNQWRhWFlFaDFhQXA5QTNZUCt0NXBGbU9Gagp3a2dDUVBHZVpTRlEyOXFnQUNLaGN5bnFSVG14NGppYnJSYUNQY3lZWEJBRUEzdXRzcG9xRlZRNXMrTUlGVVp5Cm4xbThFQlJWWUlpeWJ2WG43d1Y3S1FXL1FJcE80THBYbGtQMUFKWjdPMjhJL1VocjZkd2NTcmR1YUVobjZKaXMKVXFJM3FCRVJEN3
+BuTFl3QlZyVk5RQ1EwWXB1Y21mOWpIL3o5M1hMTWlEc1RvVDJwcTYvV3d0aTk1MEdBNXUvNApHWmJyQzNvTGFJY2NnTGxWUDdCandXRWpjQUlGMjZ2c21ZazZDZVBjNjRBN3ZOTEd0MHQxb2x3b0RiQ2RjWG12CmlJQkJjZDlDUTl5cTY4dTFacWpHVUxUeTBGSTJlZzVmaGR1Uk5SUk5zbHZOQWdNQkFBR2pR
+akJBTUE0R0ExVWQKRHdFQi93UUVBd0lDQkRBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJScDFtVlhSYnNjZmxZUgpEMTFWWmExblI2Q3g1REFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBYXZnVnBraGJ5MXFHcWtuV2xiY0c1Nnh2CldrMGpBaVNIWXJVUlhza3AzaGJjdk1yc3RDK2Y4QX
+N3ejRFRjJ6UndKanlEZ3loRUE0OXQrQ0YvTW5JemRLa2QKeUlhby9JS1QwZVp6R1BvNHZQeEE5cklRSnNibnNOc0Y4Ujh2OFdScDRBdk5PeGQzNnlnRXNwVldiQ0lnNzdWVAp6WkRlSlQvTmNsOEVtcmNNQ3lNYkIzbWZURitLWDluQXJJM0s5S0Z0dm4xcEp5dzFoU1l3ZTNpR0FzYThQR2VUCkovdVNtZmY4
+alZ6OHdqaVlxM0swbUFiUS9kc1hLaVZ3QUhPbUVyajRNSThmcVBBaUhDU0ttczAvUXlkZ2psRUoKY0lpcVVUUFRnTlQzYi9lNG91RW9POUp6cUZtc2h2RWdLZk9Pa2s1SnJIci9EdDFLTmJ1dHF0bFhVTEJieVE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://34.66.227.48
+  name: gke_hotsapp_us-central1-c_cluster-1
 contexts:
-- name: "dev11"
-  context:
-    user: "dev11"
-    cluster: "dev11"
-
-current-context: "dev11"
+- context:
+    cluster: gke_hotsapp_us-central1-c_cluster-1
+    user: gke_hotsapp_us-central1-c_cluster-1
+  name: gke_hotsapp_us-central1-c_cluster-1
+current-context: gke_hotsapp_us-central1-c_cluster-1
+kind: Config
+preferences: {}
+users:
+- name: gke_hotsapp_us-central1-c_cluster-1
+  user:
+    auth-provider:
+      config:
+        access-token: ya29.a0AfH6SMBcIgZpcpB1FvkfMgoxqqp8OKOjOD3uQEKSeEf0aQN8Lhv6QU0Vew4pUUkA7wqCwiqgBIxwba7_NoWixr9rInwD23PZvm_DWSlgGzsRiygV5fr6AXO1mco5AI6WV3Kd-uejQGeAs8ya-27ZEHr06Zm6uGLmryNIWlV6Z1c4jX0R8aaGBB-dT5o_5GOrBIuP9yw6yaasSPkmj8oEuB4M-s8xJ-KqQiqHnKHmIi-BPZA8s29bYuxaxUNyL2kgwQRWzxIUlGJa
+        cmd-args: config config-helper --format=json
+        cmd-path: /usr/lib/google-cloud-sdk/bin/gcloud
+        expiry: "2020-10-07T15:21:13Z"
+        expiry-key: '{.credential.token_expiry}'
+        token-key: '{.credential.access_token}'
+      name: gcp

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: appfront
-        image: hotsapp/appfront
+        image: fabiolux/hotsappfront
         ports:
         - containerPort: 80
 

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapi
-        image: hotsapp/webapi
+        image: fabiolux/hotsappwebapi
         ports:
         - containerPort: 80
 
